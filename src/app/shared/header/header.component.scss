@@ -1,0 +1,66 @@
+.mainHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #141D2F;
+  height: 109.3px;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 200;
+
+  img {
+    padding-left: 100px;
+    width: 150px;
+    height: 35.03px;
+    cursor: pointer;
+  }
+  .mobileHamburgerMenu {
+    display: none;
+
+}
+
+  div {
+    padding-right: 100px;
+  }
+
+  button {
+    width: 130px;
+    height: 32px;
+    border: unset;
+    color: #FFFFFF;
+    background-color: #141D2F;
+    font-size: 23px;
+    cursor: pointer;
+
+    &:hover {
+      // color: #70E61C;
+      color: #70E61C;
+        transition: all 200ms ease-in-out;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .mainHeader {
+
+    button {
+      display: none;
+    }
+
+    .mobileHamburgerMenu {
+      display: flex;
+      width: 30px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-position: top 40px right 25px;
+      padding-left: 0;
+        }
+
+        div {
+          padding-right: 32px;
+        }
+  }
+}

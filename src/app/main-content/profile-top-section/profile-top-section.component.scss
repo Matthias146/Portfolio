@@ -1,0 +1,160 @@
+.mainTopSection{
+  // position: relative;
+  top: 108px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  max-width: 100%;
+  height: 1400px;
+  background-color: #141D2F;
+  background-image: url('./../../../../public/assets/img/curve.png');
+  background-position: bottom -120px left 0px;
+  background-size: 100vw 770px;
+  background-repeat: no-repeat;
+
+  .leftContent {
+    display: flex;
+    justify-content: start;
+    width: 30vw;
+
+    img {
+      background-image: url('./../../../../public/assets/img/photo\ shadows.png');
+      background-position: bottom 30px right -30px;
+      background-size: 860px 770px;
+      background-repeat: no-repeat;
+      width: 700px;
+      height: 720px;
+      padding: 110px;
+    }
+  }
+  .btnProfile {
+    border: unset;
+    color: #fff;
+    background-color: #70E61C;
+    width: 165px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 24px;
+    margin-top: 80px;
+
+    &:hover {
+      width: 175px;
+      height: 70px;
+      background-color: #9747FF;
+    }
+}
+
+.rightContent {
+  width: 50vw;
+  // height: 372px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .rightContentWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+  .purple {
+    color: #9747FF;
+    font-weight: 100;
+    font-size: 48px;
+  }
+
+  .name {
+    color: #fff;
+    font-size: 80px;
+    line-height: 88px;
+  }
+
+  .vertikalText {
+    color: #fff;
+    transform: rotate(180deg);
+    font-weight: 100;
+    font-size: 96px;
+    writing-mode: vertical-lr;
+      }
+
+
+
+
+}
+
+}
+.contactOnTop{
+  position: absolute;
+  left: 0;
+  top: 1150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .socialProfile {
+    padding: 42px;
+    display: flex;
+    align-items: center;
+
+    a {
+      padding: 42px;
+    }
+
+    img{
+      width: 30px;
+      height: 30px;
+
+      &:hover {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .emailAnker {
+      text-decoration: none;
+      color: #fff;
+      font-size: 23px;
+
+    }
+  }
+
+.breakLineEmail {
+  width: 100px;
+  height: 5px;
+  background-color: #9747FF;
+}
+}
+
+.scrollPtag {
+  position: absolute;
+  top: 1200px;
+  right: 10px;
+  transform: rotate(90deg);
+  a {
+    font-size: 23px;
+    color: #fff;
+    text-decoration: none;
+
+  }
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
