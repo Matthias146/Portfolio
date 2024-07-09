@@ -1,8 +1,4 @@
 .mainTopSection{
-  // position: relative;
-  top: 108px;
-  left: 0;
-  right: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -28,7 +24,7 @@
       background-repeat: no-repeat;
       width: 700px;
       height: 720px;
-      padding: 110px;
+      padding-left: 110px;
     }
   }
   .btnProfile {
