@@ -27,18 +27,35 @@
   }
 
   button {
-    width: 130px;
+    position: relative;
+    text-align: start;
+    align-content: center;
     height: 32px;
     border: unset;
     color: #FFFFFF;
     background-color: #141D2F;
     font-size: 23px;
     cursor: pointer;
+    padding: 0;
+    margin-right: 29px;
 
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      height: 3px;
+      width: 0;
+      background-color: #9747FF;
+      border-radius: 50px;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
     &:hover {
-      // color: #70E61C;
       color: #70E61C;
-        transition: all 200ms ease-in-out;
     }
   }
 }

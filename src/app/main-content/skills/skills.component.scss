@@ -1,0 +1,130 @@
+.skillSection {
+  width: 100vw;
+  max-width: 100%;
+  background-color: #141D2F;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  align-content: center;
+  padding-top: 128px;
+  .iconContainer {
+    width: 721px;
+    height: 415px;
+
+    .icons {
+      width: 721px;
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 54px;
+      padding-left: 100px;
+
+      figure{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      figcaption {
+        color:#fff
+      }
+    }
+      img {
+        width: 60px;
+        height: 60px;
+        &:hover {
+          animation: jumpIcon 200ms linear;
+          animation-iteration-count: 3;
+
+        }
+      }
+    }
+    .iconLast {
+      width: 360.5px;
+      height: 118px;
+      display: flex;
+      justify-content: flex-start;
+      gap: 162px;
+      padding-left: 100px;
+
+      figcaption {
+        color:#fff
+      }
+
+      img {
+        width: 60px;
+        height: 60px;
+
+        &:hover {
+          animation: jumpIcon 230ms linear;
+          animation-iteration-count: 3;
+
+        }
+      }
+    }
+  }
+  @keyframes jumpIcon {
+    20% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    65% {
+      transform: translateY(-15px);
+    }
+    85% {
+      transform: translateY(-5px);
+    }
+
+  }
+
+
+  .mySkillsContainer {
+    width: 571px;
+    height: 485px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: baseline;
+
+    .headSeperator{
+      position: relative;
+      top: -20px;
+      width: 58px;
+      height: 4px;
+      background-color: #9747FF;
+    }
+
+    .skillsHeading {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+
+      .btnContainer {
+        width: 100%;
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+      }
+
+      h2 {
+        color: #fff;
+        font-size: 90px;
+        font-weight: 700;
+      }
+      .skillParagraph {
+        width: 471px;
+        height: 40px;
+
+        p{
+          color: #fff;
+          text-align: start;
+
+        }
+      }
+
+    }
+  }
+
+}
