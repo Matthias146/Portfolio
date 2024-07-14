@@ -1,6 +1,7 @@
 * {
   margin: 0;
   font-family: 'Poppins';
+  scroll-behavior: smooth;
 }
 
 /* poppins-regular - latin */
@@ -88,8 +89,6 @@
   transition: all 200ms ease-in;
 
   &:hover {
-    width: 175px;
-    height: 70px;
     background-color: #9747FF;
   }
 }

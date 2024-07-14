@@ -1,0 +1,9 @@
+$main-bg: #141d2f;
+$main-focus: #70E61C;
+
+@mixin dFlex($jc: center, $ai: center, $g: 0) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $g;
+}
