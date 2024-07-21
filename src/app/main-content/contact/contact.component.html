@@ -1,0 +1,96 @@
+<section>
+  <div class="sectionHeader" data-aos="fade-right">
+    <span class="horLine"></span>
+    <h2>{{ "contact.headline" | translate }}</h2>
+  </div>
+  <main data-aos="fade-left" data-aos-duration="700">
+    <div class="description">
+      <h3>{{ "contact.subline" | translate }}</h3>
+      <p>
+        {{ "contact.body" | translate }}
+      </p>
+      <p>
+        {{ "contact.paragraph" | translate }}
+        <b>{{ "contact.paragraph-bold" | translate }}</b>
+      </p>
+    </div>
+    <div class="container">
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <div class="fixedHeightSmall">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name.."
+            [(ngModel)]="contactData.name"
+            #name="ngModel"
+            required
+          />
+          @if (!name.valid && name.touched) {
+          <small>*{{ "contact.errorName" | translate }}</small>
+          }
+        </div>
+        <div class="fixed-height-small">
+          <label for="email">E-Mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email.."
+            [(ngModel)]="contactData.email"
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            #email="ngModel"
+            required
+          />
+          @if (!email.valid && email.touched) {
+          <small>*{{ "contact.errorMail" | translate }}</small>
+          }
+        </div>
+        <div class="fixedHeightBig">
+          <label for="message">{{ "contact.message" | translate }}</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write something.."
+            style="height: 200px"
+            [(ngModel)]="contactData.message"
+            #message="ngModel"
+            minlength="4"
+            required
+          ></textarea>
+          @if (!message.valid && message.touched && message.value.length <= 0) {
+          <small>*{{ "contact.errorMessageEmpty" | translate }}</small>
+          } @if (!message.valid && message.touched && message.value.length < 4
+          && message.value.length > 0) {
+          <small>*{{ "contact.errorMessageShort" | translate }}</small>
+          }
+        </div>
+        <div class="acceptPrivacy">
+          <div>
+            <input
+              type="checkbox"
+              id="check-privacy"
+              name="check"
+              [(ngModel)]="contactData.checked"
+              #checked="ngModel"
+              required
+            />
+            <label for="check-privacy" class="privacyLabel"
+              >{{ "contact.privacyFirst" | translate
+              }}<a href="Datenschutzbestimmungen">{{ "contact.privacyLink" | translate }}</a>
+              {{ "contact.privacySecond" | translate }}</label
+            >
+          </div>
+          @if (!checked.valid && checked.touched) {
+          <small>*{{ "contact.errorPrivacy" | translate }}</small>
+          }
+        </div>
+        <div class="submitContainer">
+          <input type="submit" value="{{ 'contact.button' | translate }}" [disabled]="!contactForm.valid"/>
+        </div>
+      </form>
+    </div>
+  </main>
+  <img src="assets/img/Purple shadow footer V2.png" alt="" class="contactShadow" />
+</section>

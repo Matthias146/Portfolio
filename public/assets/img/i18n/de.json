@@ -1,0 +1,43 @@
+{
+  "header": {
+    "aboutMe": "Über mich"
+  },
+  "hero": {
+    "title": "FRONTEND ENTWICKLER",
+    "talkButton": "Lass uns reden!"
+  },
+  "aboutMe": {
+    "headline": "Über mich",
+    "hello": "Hi! My name is Felix. I'm a passionate frontend developer from Hamburg. Nice to see that you found your way here.",
+    "bulb": "",
+    "puzzle": ""
+  },
+  "mySkills": {
+    "headline": "Skills",
+    "body": "Ich habe meine Fähigkeiten in der Frontend-Entwicklung erweitert, was es mir ermöglicht hat, verschiedene reale Projekte zu erstellen.",
+    "button": "Kontaktiere mich!"
+  },
+  "portfolio": {
+    "body": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "join": "Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+    "polloLoco": "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Salsaflaschen zu sammeln, um das Killerhuhn zu bekämpfen.",
+    "pokedex": "Basierend auf der Poke-API. Eine einfache Bibliothek, die Pokemon-Informationen bereitstellt und katalogisiert."
+  },
+  "contact": {
+    "headline": "Kontakt",
+    "subline": "Sie haben ein Problem zu lösen?",
+    "body": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+    "paragraph": "Sie brauchen einen Frontend-Entwickler? ",
+    "paragraph-bold": "Kontaktieren Sie mich!",
+    "message": "Nachricht",
+    "privacyFirst": "Ich habe die ",
+    "privacyLink": "Datenschutzbestimmungen",
+    "privacySecond": "gelesen und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
+    "button": "Nachricht senden :)",
+    "errorName": "Bitte geben Sie ihren Namen an.",
+    "errorMail": "Bitte geben Sie eine E-mail Adresse an",
+    "errorMessageEmpty": "Bitte geben Sie eine Nachricht ein.",
+    "errorMessageShort": "Die Nachricht muss mindestens 4 Zeichen enthalten.",
+    "errorPrivacy": "Bitte akzeptieren sie Datenschutzbestimmungen."
+  }
+}

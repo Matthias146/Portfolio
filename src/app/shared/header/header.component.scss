@@ -1,32 +1,94 @@
-.mainHeader {
+@import "./../../shared/variable.scss";
+
+.container {
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #141D2F;
-  height: 109.3px;
-  width: 100vw;
-  max-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  right: 0;
+  background-color: $main-bg;
   z-index: 200;
-
-  img {
-    padding-left: 100px;
-    width: 150px;
-    height: 35.03px;
-    cursor: pointer;
-  }
-  .mobileHamburgerMenu {
-    display: none;
-
+  @include dFlex();
 }
 
-  div {
-    padding-right: 100px;
+.navMenuMobile {
+  position: absolute;
+  top: 91px;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #414856;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .linkMobile {
+    position: relative;
+    text-align: start;
+    background-color: #414856;
+    align-content: center;
+    text-decoration: none;
+    height: 32px;
+    border: unset;
+    color: #FFFFFF;
+    font-size: 23px;
+    cursor: pointer;
+    margin: 30px;
+    padding: 0;
+    margin-right: 29px;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      height: 3px;
+      width: 0;
+      background-color: #9747FF;
+      border-radius: 50px;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+      &:hover {
+        color: #70E61C;
+      }
+    }
   }
 
-  a {
+
+.d-none {
+  display: none;
+}
+.flagImg {
+  width: 36px;
+}
+
+.navWrapper {
+  width: 100%;
+  max-width: 1440px;
+  @include dFlex($jc: space-between);
+  padding: 37px 100px;
+
+  >img {
+    width: 150px;
+    height: 36px;
+  }
+
+
+
+  > nav {
+    @include dFlex($g: 29px);
+    position: relative;
+
+    img {
+      cursor: pointer;
+    }
+
+    a {
     position: relative;
     text-align: start;
     align-content: center;
@@ -61,24 +123,84 @@
   }
 }
 
-@media (max-width: 980px) {
-  .mainHeader {
+  }
 
-    button {
+.burgerMenu {
+  display: none;
+}
+
+.languageSelect {
+  display: none;
+  &.open {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    position: absolute;
+    right: -16px;
+    bottom: -136px;
+    padding: 8px 16px 16px 16px;
+    border-radius: 10px;
+    background-color: $main-bg;
+    box-shadow: 0 4px 4px 4px rgba($color: #000000, $alpha: 0.25);
+  }
+
+  > span {
+    @include dFlex($jc: flex-start, $g: 8px);
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    &:hover {
+      border-bottom: 1px solid $main-focus;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .navWrapper {
+    padding: 37px 40px;
+    > nav a {
       display: none;
     }
+  }
+  .burgerMenu {
+    @include dFlex();
+    cursor: pointer;
+    position: relative;
+    width: 32px;
+    height: 32px;
 
-    .mobileHamburgerMenu {
-      display: flex;
-      width: 30px;
-      height: 30px;
-      background-repeat: no-repeat;
-      background-position: top 40px right 25px;
-      padding-left: 0;
-        }
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
 
-        div {
-          padding-right: 32px;
+      .topLine,
+      .middleLine,
+      .bottomLine {
+        transition: all 0.15s linear;
+        transform-origin: center;
+      }
+
+      .middleLine {
+        transition: transform 0.15s ease-in-out;
+      }
+
+      &:hover {
+        .middleLine {
+          transform: scaleX(0.5);
         }
+      }
+    }
+    &.open {
+      .topLine {
+        transform: rotate(45deg) translate(5px, 10px);
+      }
+      .bottomLine {
+        transform: rotate(-45deg) translate(5px, -10px);
+      }
+      .middleLine {
+        display: none;
+      }
+    }
   }
 }

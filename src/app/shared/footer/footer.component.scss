@@ -1,86 +1,96 @@
-.footer {
-  position: relative;
-  height: 291px;
-  width: 100vw;
-  max-width: 100%;
-  background-color: #141D2F;
-  border-top: 4px solid #70E61C;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+@import "./../../shared/variable.scss";
 
-  p{
-    color: #fff;
-    font-size: 23px;
-  }
-
-  img {
-    cursor: pointer;
-  }
-
-  .logoAndImpressum {
-    display: flex;
-    flex-direction: column;
-    padding-left: 100px;
-
-    a{
-      text-decoration: none;
-      color: #fff;
-      margin-left: 8px;
-      font-size: 16px;
+section {
+  @include dFlex($g: 23px);
+  flex-direction: column;
+  border-top: 4px solid $main-focus;
+  padding: 60px 0;
 
 
-    }
-  }
-  .socialMediaIcons {
-    display: flex;
-    padding-right: 100px;
-    gap: 42px;
-    cursor: pointer;
-
-    img{
-    width: 30px;
-    height: 30px;
-
-    &:hover {
-      width: 40px;
-      height: 40px;
-    }
+  .logoContainer {
+    >img {
+      width: 150px;
+      height: 36px;
     }
   }
 }
 
-@media (min-width:320px) and (max-width:980px){
-  .footer {
-    height: 380px;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+span {
+  font-size: 23px;
+}
 
-    .logoAndImpressum {
-      display: flex;
-      justify-content: center;
-      padding: 0;
-      margin-bottom: 32px;
-    }
-    .socialMediaIcons {
-      display: flex;
-      justify-content: center;
-      padding: 0;
-      margin-top: 32px;
-    }
-    .impressum {
-      position: absolute;
-      bottom: 64px;
-      left: 45%;
-      margin-top: 32px;
+a {
+  text-decoration: none;
+  color: white;
+}
 
+.desktopImprint {
+  display: none;
+}
+
+.contacts {
+  @include dFlex($jc: flex-start, $g: 42px);
+
+  > svg:hover {
+    scale: 115%;
+    cursor: pointer;
+
+    path {
+      fill: $main-focus;
     }
   }
 
+  > a {
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+  }
+}
 
+@media (min-width: 750px) {
+  section {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px 40px;
+  }
 
+  .mobileImprint {
+    display: none;
+  }
+  .desktopImprint {
+    display: block;
+  }
 
+  .logoContainer {
+    position: relative;
+
+    > .desktopImprint {
+      position: absolute;
+      bottom: -20px;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        height: 3px;
+        width: 0;
+        background-color: #9747FF;
+        border-radius: 50px;
+        transition: width 0.3s ease;
+      }
+
+      &:hover::before {
+        width: 100%;
+      }
+        &:hover {
+          color: #70E61C;
+        }
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  section {
+    padding: 60px 100px;
+  }
 }

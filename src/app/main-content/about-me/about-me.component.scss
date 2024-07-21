@@ -1,63 +1,190 @@
-.aboutMe {
-  background-color: #141D2F;
-  height: 600px;
-  max-width: 100%;
-  padding-left: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  .leftAboutMe{
-  h2 {
-    font-size: 90px;
-    color: #fff;
-    font-weight: 700;
-  }
-  .aboutText{
-    width: 471px;
-    height: 336px;
+// .aboutMe {
+//   background-color: #141D2F;
+//   height: 600px;
+//   max-width: 100%;
+//   padding-left: 100px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   .leftAboutMe{
+//   h2 {
+//     font-size: 90px;
+//     color: #fff;
+//     font-weight: 700;
+//   }
+//   .aboutText{
+//     width: 471px;
+//     height: 336px;
 
-    .topText {
-      text-align: start;
-      padding-bottom: 16px;
+//     .topText {
+//       text-align: start;
+//       padding-bottom: 16px;
+//     }
+
+//     .subText {
+//       width: 444px;
+//       height: 100px;
+//       display: flex;
+//       align-items: flex-start;
+//       justify-content: center;
+//     }
+//   p {
+//     color: #fff;
+//     font-size: 16px;
+//     text-align: end;
+//   }
+// }
+// }
+//   .rightAboutMe {
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     padding-top: 64px;
+//     background-image: url(./../../../../public/assets/img/Purple\ shadow\ 1.png);
+//     background-position: bottom 60px right -250px;
+//     background-size: 500px 480px;
+//     background-repeat: no-repeat;
+
+//     .imgAboutMe {
+
+//       img {
+//       width: 453px;
+//       height: 453px;
+//       border: 5px solid #70E61C;
+//       border-radius: 50%;
+//       object-fit: cover;
+//       object-position: top;
+//       }
+//     }
+//     .imgslideContainer {
+//       width: 267px;
+//       height: 5px;
+//       background-color: #70E61C;
+//     }
+//   }
+// }
+
+@import "./../../shared/variable.scss";
+
+section {
+  @include dFlex($jc: space-between, $g: 132px);
+  padding-top: 140px;
+  position: relative;
+
+  > .aboutShadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    clip-path: inset(0 0 0 50%);
+
+    > img {
+      height: 550px;
+      transform: translateX(60%);
+    }
+  }
+
+  > .leftSection {
+    padding-left: 100px;
+    @include dFlex($jc: flex-start, $ai: flex-start, $g: 35px);
+    flex-direction: column;
+    max-width: 650px;
+    flex: 1;
+
+    > h2 {
+      font-size: 90px;
     }
 
-    .subText {
-      width: 444px;
-      height: 100px;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-    }
-  p {
-    color: #fff;
-    font-size: 16px;
-    text-align: end;
-  }
-}
-}
-  .rightAboutMe {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-top: 64px;
-    background-image: url(./../../../../public/assets/img/Purple\ shadow\ 1.png);
-    background-position: bottom 60px right -250px;
-    background-size: 500px 480px;
-    background-repeat: no-repeat;
+    > div {
+      @include dFlex($jc: flex-start);
 
-    .imgAboutMe {
-
-      img {
-      width: 453px;
-      height: 453px;
-      border: 5px solid #70E61C;
-      border-radius: 50%;
+      > img {
+        width: 50px;
+        height: 50px;
+        margin: 24px;
       }
     }
-    .imgslideContainer {
-      width: 267px;
-      height: 5px;
-      background-color: #70E61C;
+  }
+
+  > .rightSection {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    > .horLine {
+      width: 100%;
+      max-width: 200px;
+      height: 4px;
+      background-color: $main-focus;
+    }
+    > img {
+      width: 453px;
+      height: 453px;
+      border: 4px solid $main-focus;
+      border-radius: 50%;
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  section {
+    gap: 64px;
+    > .leftSection {
+      > h2 {
+        font-size: 72px;
+      }
+    }
+
+    > .rightSection {
+      > img {
+        width: 350px;
+        height: auto;
+        border: 4px solid $main-focus;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  section {
+    > .leftSection {
+      width: 80%;
+      max-width: 80%;
+    }
+
+    > .rightSection {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  section {
+    padding-right: 40px;
+    > .leftSection {
+      padding-left: 40px;
+      width: 100%;
+      max-width: 100%;
+      gap: 24px;
+
+      > div img {
+        margin-left: 0;
+      }
+    }
+
+    > .rightSection {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  section {
+    > .leftSection {
+      > h2 {
+        font-size: 45px;
+      }
     }
   }
 }

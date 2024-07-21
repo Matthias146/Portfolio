@@ -1,0 +1,43 @@
+
+{
+  "header": {
+    "aboutMe": "About me"
+  },
+  "hero": {
+    "title": "FRONTEND DEVELOPER",
+    "talkButton": "Let's talk!"
+  },
+  "aboutMe": {
+    "headline": "About Me",
+    "hello": "Hi! My name is Matthias. I'm a passionate frontend developer from Nürtingen. Nice to see that you found your way here.",
+    "bulb": "I love engaging with new technologies and learning about them. As a developer, I can now integrate this passion into my daily professional life.",
+    "puzzle": "Below, is an overview of my skills and some projects where I have applied them. I am pleased that you have found your way to my site."
+  },
+  "mySkills": {
+    "headline": "My skills",
+    "body": "I have grown my frontend development skills that have allowed me to create different real projects.",
+    "button": "Contact me!"
+  },
+  "portfolio": {
+    "body": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "join": "Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "polloLoco": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to collect coins and salsa bottles to fight the killer chicken."
+  },
+  "contact": {
+    "headline": "Contact",
+    "subline": "Got a Problem to solve?",
+    "body": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+    "paragraph": "Need a Frontend developer? ",
+    "paragraph-bold": "Contact me!",
+    "message": "Message",
+    "privacyFirst": "I've read the ",
+    "privacyLink": "privacy policy",
+    "privacySecond": "and agree to the processing of my data as outlined.",
+    "button": "Send message :)",
+    "errorName": "Please enter your name.",
+    "errorMail": "Please enter your email.",
+    "errorMessageEmpty": "Please enter a message.",
+    "errorMessageShort": "Message must be at least 4 characters long.",
+    "errorPrivacy": "Please accept the privacy police."
+  }
+}

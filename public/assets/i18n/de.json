@@ -1,0 +1,42 @@
+{
+  "header": {
+    "aboutMe": "Über mich"
+  },
+  "hero": {
+    "title": "FRONTEND ENTWICKLER",
+    "talkButton": "Lass uns reden!"
+  },
+  "aboutMe": {
+    "headline": "Über mich",
+    "hello": "Hallo! Mein Name ist Matthias. Ich bin leidenschaftlicher Frontend-Entwickler aus Nürtingen. Schön zu sehen, dass Sie den Weg hierher gefunden haben.",
+    "bulb": "Ich liebe es, mich mit neuen Technologien zu beschäftigen und diese zu lernen. Als Entwickler kann ich diese Leidenschaft nun in meinen beruflichen Alltag integrieren.",
+    "puzzle": "Weiter unten finden Sie einen Überblick über meine Fähigkeiten und einige Projekte, in welchen ich diese umgesetzt habe. Es freut mich, dass Sie Ihren Weg auf meine Seite gefunden haben."
+  },
+  "mySkills": {
+    "headline": "Skills",
+    "body": "Ich habe meine Fähigkeiten in der Frontend-Entwicklung erweitert, was es mir ermöglicht hat, verschiedene reale Projekte zu erstellen.",
+    "button": "Kontaktiere mich!"
+  },
+  "portfolio": {
+    "body": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "join": "Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+    "polloLoco": "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Salsaflaschen zu sammeln, um das Killerhuhn zu bekämpfen."
+  },
+  "contact": {
+    "headline": "Kontakt",
+    "subline": "Sie haben ein Problem zu lösen?",
+    "body": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+    "paragraph": "Sie brauchen einen Frontend-Entwickler? ",
+    "paragraph-bold": "Kontaktieren Sie mich!",
+    "message": "Nachricht",
+    "privacyFirst": "Ich habe die ",
+    "privacyLink": "Datenschutzbestimmungen",
+    "privacySecond": "gelesen und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
+    "button": "Nachricht senden :)",
+    "errorName": "Bitte geben Sie ihren Namen an.",
+    "errorMail": "Bitte geben Sie eine E-mail Adresse an",
+    "errorMessageEmpty": "Bitte geben Sie eine Nachricht ein.",
+    "errorMessageShort": "Die Nachricht muss mindestens 4 Zeichen enthalten.",
+    "errorPrivacy": "Bitte akzeptieren sie Datenschutzbestimmungen."
+  }
+}

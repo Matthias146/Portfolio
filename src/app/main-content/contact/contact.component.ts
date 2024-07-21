@@ -1,0 +1,85 @@
+import { Component, inject, } from '@angular/core';
+import { FormsModule, NonNullableFormBuilder, ReactiveFormsModule, Validators, FormBuilder, NgForm } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { TranslateModule } from '@ngx-translate/core';
+import Aos from 'aos';
+
+@Component({
+  selector: 'app-contact',
+  standalone: true,
+  imports: [FormsModule, CommonModule, ReactiveFormsModule, TranslateModule],
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.scss'
+})
+export class ContactComponent {
+
+  http = inject(HttpClient);
+
+  contactData = {
+    name: '',
+    email: '',
+    message: '',
+    checked: false,
+  };
+
+  mailTest = false;
+
+  post = {
+    endPoint: 'https://matthias-hammelehle.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.log('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      // ngForm.resetForm();
+    }
+  }
+
+  // fb = inject(NonNullableFormBuilder);
+  // contactForm = this.fb.group({
+  //   name: this.fb.control('', { validators: [Validators.required] }),
+  //   email: this.fb.control('', {
+  //     validators: [Validators.required, Validators.email],
+  //   }),
+  //   message: this.fb.control('', {
+  //     validators: [Validators.required, Validators.minLength(4)],
+  //   }),
+  // });
+
+  // onSubmit() {
+  //   console.log(
+  //     this.contactForm.getRawValue(),
+  //     this.contactForm.controls.email
+  //   );
+  // }
+}
+
+
+
+
+
+
+
+
+
+
+

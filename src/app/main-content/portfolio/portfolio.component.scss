@@ -1,51 +1,49 @@
 @import "./../../shared/variable.scss";
 
-.portfolio {
-  width: 100vw;
-  max-width: 100%;
-  background-color: #141D2F;
-  padding: 128px 0;
+.portfolioSection {
+  margin-top: 200px;
+  position: relative;
 
-  .headerContent {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    padding-bottom: 32px;
-
-  .leftLine {
-    width: 109px;
-    height: 4px;
-    background-color: #9747FF;
-  }
-
-  h2 {
-    font-size: 90px;
-    font-weight: 700;
-    line-height: 108px;
-    color: #fff;
-    margin: 16px;
-  }
-
-  .rightLine {
-    width: 484px;
-    height: 4px;
-    background-color: #9747FF;
+  > p {
+    text-align: center;
+    margin-bottom: 100px;
   }
 }
 
-p {
-  color: #fff;
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
+.headlineContainer {
+  width: 100%;
+  @include dFlex();
+
+  > .horLine {
+    flex-grow: 1;
+  }
+
+  > div {
+    display: flex;
+    justify-content: flex-end;
+    .horLine-left {
+      width: 15%;
+      height: 4px;
+      background-color: #9747FF;
+    }
+  }
+
+  > .horLine-right {
+    height: 4px;
+    background-color: #9747FF;
+  }
+
+  > h2 {
+    font-size: 90px;
+    padding: 0 32px;
+  }
 }
 
 .allProjects {
-  width: 100vw;
-  max-width: 100%;
+  width: 100%;
   @include dFlex($g: 150px);
   flex-direction: column;
-  padding-top: 128px;
+  padding: 0 100px;
 }
 
 .row-reverse {
@@ -53,7 +51,7 @@ p {
   flex-direction: row-reverse;
 }
 
-.single-project {
+.singleProject {
   @include dFlex($g: 100px);
   width: 100%;
 
@@ -61,7 +59,7 @@ p {
     height: 339px;
   }
 
-  > .project-info {
+  > .projectInfo {
     max-width: 40%;
     @include dFlex($ai: flex-start, $g: 16px);
     flex-direction: column;
@@ -82,7 +80,7 @@ p {
   }
 }
 
-.project-btns {
+.projectBtns {
   @include dFlex($g: 86px);
   margin-top: 20px;
 
@@ -109,36 +107,36 @@ p {
     background-color: $main-bg;
 
     &:hover {
-      background-color: $main-focus;
+      background-color: #70E61C;
     }
   }
 }
 
-.portfolio-shadow {
+.portfolioShadow {
   position: absolute;
   z-index: -1;
 }
 
-.shadow-one {
+.shadowOne {
   top: -350px;
   left: -450px;
   transform: rotate(-120deg);
 }
 
-.shadow-two {
+.shadowTwo {
   top: 200px;
   right: -420px;
   transform: rotate(60deg);
 }
 
-.shadow-three {
+.shadowThree {
   top: 65%;
   left: -100px;
   max-height: 700px;
 }
 
 @media (max-width: 1250px) {
-  .headline-container {
+  .headlineContainer {
     > h2 {
       font-size: 72px;
     }
@@ -146,7 +144,7 @@ p {
 }
 
 @media (max-width: 1150px) {
-  .single-project {
+  .singleProject {
     flex-direction: column;
     gap: 0;
 
@@ -154,7 +152,7 @@ p {
       height: 339px;
     }
 
-    > .project-info {
+    > .projectInfo {
       max-width: 400px;
       align-items: center;
 
@@ -170,30 +168,30 @@ p {
 }
 
 @media (max-width: 950px) {
-  .all-projects {
+  .allProjects {
     padding: 0;
   }
-  .project-btns {
+  .projectBtns {
     gap: 32px;
   }
 
-  .portfolio-shadow {
+  .portfolioShadow {
     width: 400px;
   }
 
-  .shadow-one {
+  .shadowOne {
     top: -350px;
     left: -150px;
     transform: rotate(-120deg);
   }
 
-  .shadow-two {
+  .shadowTwo {
     top: 200px;
     right: -150px;
     transform: rotate(60deg);
   }
 
-  .shadow-three {
+  .shadowThree {
     top: 65%;
     left: -150px;
     max-height: 700px;
@@ -201,10 +199,9 @@ p {
 }
 
 @media (max-width: 450px) {
-  .headline-container {
+  .headlineContainer {
     > h2 {
       font-size: 45px;
     }
   }
-}
 }

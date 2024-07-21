@@ -1,36 +1,53 @@
-<section class="portfolio">
-  <div class="headerContent">
-<div class="leftLine"></div>
-<div><h2>Portfolio</h2></div>
-<div class="rightLine"></div>
-</div>
-<p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
-<div class="allProjects">
-  @for (project of projects; track project.name; let odd = $odd) {
-  <div [ngClass]="{ 'row-reverse': odd }" class="single-project">
-    <img
-      src="{{ project.imgSrc }}"
-      alt=""
-      [attr.data-aos]="odd ? 'fade-right' : 'fade-left'"
-      data-aos-duration="500"
-    />
-    <div
-      class="project-info"
-      [attr.data-aos]="odd ? 'fade-right' : 'fade-left'"
-      data-aos-delay="100"
-      data-aos-duration="500"
-    >
-      <h3>{{ project.name }}</h3>
-      <span>{{ project.skills.join(" | ") }}</span>
-      <p>{{ project.description }}</p>
-      <div class="project-btns">
-        <a href="" target="_blank" class="test">Live test</a>
-        <a href="{{ project.github }}" target="_blank" class="github"
-          >Github</a
-        >
+<section class="portfolioSection">
+  <div class="headlineContainer" data-aos="fade-left">
+    <div class="horLine">
+      <span class="hor-line-left"></span>
+    </div>
+    <h2>Portfolio</h2>
+    <span class="horLine horLineRight"></span>
+  </div>
+  <p data-aos="fade-left">{{"portfolio.body" | translate}}</p>
+  <div class="allProjects">
+    @for (project of projects; track project.name; let odd = $odd) {
+    <div [ngClass]="{ 'row-reverse': odd }" class="singleProject">
+      <img
+        src="{{ project.imgSrc }}"
+        alt=""
+        [attr.data-aos]="odd ? 'fade-right' : 'fade-left'"
+        data-aos-duration="500"
+      />
+      <div
+        class="projectInfo"
+        [attr.data-aos]="odd ? 'fade-right' : 'fade-left'"
+        data-aos-delay="100"
+        data-aos-duration="500"
+      >
+        <h3>{{ project.name }}</h3>
+        <span>{{ project.skills.join(" | ") }}</span>
+        <p>{{ project.description | translate }}</p>
+        <div class="projectBtns">
+          <a href="{{ project.liveTest }}" target="_blank" class="test">Live test</a>
+          <a href="{{ project.github }}" target="_blank" class="github"
+            >Github</a
+          >
+        </div>
       </div>
     </div>
+    }
   </div>
-  }
-</div>
+  <img
+    src="assets/img/Green shadow 3 (skills and portfolio section).png"
+    alt=""
+    class="portfolioShadow shadowOne"
+  />
+  <img
+    src="assets/img/Green shadow 3 (skills and portfolio section).png"
+    alt=""
+    class="portfolioShadow shadowTwo"
+  />
+  <!-- <img
+    src="assets/img/Purple shadow footer v1 and portfolio section.png"
+    alt=""
+    class="portfolioShadow shadowThree"
+  /> -->
 </section>

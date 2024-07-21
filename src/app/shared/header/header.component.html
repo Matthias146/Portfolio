@@ -1,14 +1,60 @@
-<div class="mainHeader">
-  <img src="assets/img/logo.png">
-  <div>
- <!-- <button style="width: 114px;">About me</button> -->
- <a href="#about-me">About me</a>
- <a href="#skills">Skills</a>
- <a href="#portfolio">Portfolio</a>
- <!-- <button style="width: 55px;">Skills</button>
- <button style="width: 95px;">Portfolio</button> -->
- <div class="mobileDiv">
- <img class="mobileHamburgerMenu" src="assets/img/burger menu.png">
-</div>
-</div>
+<div class="container">
+  <div class="navWrapper">
+    <img src="assets/img/logo.png" alt="logo">
+    <nav>
+      <a href="#about-me">{{ "header.aboutMe" | translate }}</a>
+      <a href="#my-skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <img
+      [src]="languageService.currentFlag"
+      alt=""
+      (click)="toggleLanguageSelect()"
+      class="flagImg"/>
+    <div class="languageSelect" [class.open]="isOpen">
+      <span (click)="changeLanguage('en')"
+        ><img src="assets/img/american-flag.png" alt="" class="flagImg" />
+        <p>EN</p></span>
+      <span (click)="changeLanguage('de')"
+        ><img src="assets/img/german-flag.png" alt="" class="flagImg" />
+        <p>DE</p></span>
+    </div>
+      <div
+        class="burgerMenu"
+        id="burger-menu"
+        (click)="toggleMenu()"
+        [ngClass]="{ open: menuOpen }">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            class="topLine"
+            d="M1 2H31"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"/>
+          <path
+            class="middleLine"
+            d="M1 16H31"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"/>
+          <path
+            class="bottomLine"
+            d="M1 30H31"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"/>
+        </svg>
+      </div>
+    </nav>
+    <div class="navMenuMobile d-none" id="navMenuMobile">
+      <a class="linkMobile" href="#about-me" (click)="toggleMenu()">{{ "header.aboutMe" | translate }}</a>
+      <a class="linkMobile" href="#my-skills" (click)="toggleMenu()">Skills</a>
+      <a class="linkMobile" href="#portfolio" (click)="toggleMenu()">Portfolio</a>
+      <a class="linkMobile" href="#contact" (click)="toggleMenu()">{{"Contact" | translate}}</a>
+    </div>
+  </div>
 </div>

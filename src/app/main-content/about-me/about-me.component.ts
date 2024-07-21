@@ -1,11 +1,12 @@
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import Aos from 'aos';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })
