@@ -3,7 +3,7 @@
     <img src="assets/img/logo.png" alt="logo">
     <nav>
       <a href="#about-me">{{ "header.aboutMe" | translate }}</a>
-      <a href="#my-skills">Skills</a>
+      <a href="#skills">Skills</a>
       <a href="#portfolio">Portfolio</a>
       <img
       [src]="languageService.currentFlag"
@@ -52,7 +52,7 @@
     </nav>
     <div class="navMenuMobile d-none" id="navMenuMobile">
       <a class="linkMobile" href="#about-me" (click)="toggleMenu()">{{ "header.aboutMe" | translate }}</a>
-      <a class="linkMobile" href="#my-skills" (click)="toggleMenu()">Skills</a>
+      <a class="linkMobile" href="#skills" (click)="toggleMenu()">Skills</a>
       <a class="linkMobile" href="#portfolio" (click)="toggleMenu()">Portfolio</a>
       <a class="linkMobile" href="#contact" (click)="toggleMenu()">{{"Contact" | translate}}</a>
     </div>

@@ -170,13 +170,21 @@ section {
 @media (max-width: 450px) {
   section {
     > .skillsHeadline {
+      width: 100%;
+      max-width: 100%;
+      padding-right: 16px;
       > .heading {
         gap: 16px;
         > h2 {
-          font-size: 45px;
+          font-size: 36px;
         }
         > .horLine {
           width: 36px;
+        }
+        >p {
+          font-size: 16px;
+          text-wrap: balance;
+          padding-right: 16px;
         }
       }
     }

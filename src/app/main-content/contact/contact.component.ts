@@ -49,28 +49,9 @@ export class ContactComponent {
           },
           complete: () => console.log('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      // ngForm.resetForm();
     }
   }
 
-  // fb = inject(NonNullableFormBuilder);
-  // contactForm = this.fb.group({
-  //   name: this.fb.control('', { validators: [Validators.required] }),
-  //   email: this.fb.control('', {
-  //     validators: [Validators.required, Validators.email],
-  //   }),
-  //   message: this.fb.control('', {
-  //     validators: [Validators.required, Validators.minLength(4)],
-  //   }),
-  // });
-
-  // onSubmit() {
-  //   console.log(
-  //     this.contactForm.getRawValue(),
-  //     this.contactForm.controls.email
-  //   );
-  // }
 }
 
 

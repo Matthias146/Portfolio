@@ -71,6 +71,7 @@ textarea {
 
 .fixedHeightBig {
   height: 265px;
+  margin-top: 42px;
 }
 
 small {
@@ -241,6 +242,7 @@ input[type="checkbox"]:checked:before {
     }
   }
 
+
   main {
     padding: 0 28px;
     > .description {
@@ -254,4 +256,20 @@ input[type="checkbox"]:checked:before {
   input[type="submit"] {
     font-size: 16px;
   }
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+  .container {
+    padding: 0 12%;
+  }
+  main{
+    >.description {
+      padding: 0 12%;
+    }
+  }
+  .sectionHeader {
+    > h2 {
+      padding: 0 8%;
+    }
+}
 }

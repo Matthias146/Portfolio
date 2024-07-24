@@ -6,7 +6,7 @@
     <h2>Portfolio</h2>
     <span class="horLine horLineRight"></span>
   </div>
-  <p data-aos="fade-left">{{"portfolio.body" | translate}}</p>
+  <p class="portfolioBodyP" data-aos="fade-left">{{"portfolio.body" | translate}}</p>
   <div class="allProjects">
     @for (project of projects; track project.name; let odd = $odd) {
     <div [ngClass]="{ 'row-reverse': odd }" class="singleProject">
@@ -20,11 +20,10 @@
         class="projectInfo"
         [attr.data-aos]="odd ? 'fade-right' : 'fade-left'"
         data-aos-delay="100"
-        data-aos-duration="500"
-      >
+        data-aos-duration="500">
         <h3>{{ project.name }}</h3>
         <span>{{ project.skills.join(" | ") }}</span>
-        <p>{{ project.description | translate }}</p>
+        <p class="descriptionP">{{ project.description | translate }}</p>
         <div class="projectBtns">
           <a href="{{ project.liveTest }}" target="_blank" class="test">Live test</a>
           <a href="{{ project.github }}" target="_blank" class="github"

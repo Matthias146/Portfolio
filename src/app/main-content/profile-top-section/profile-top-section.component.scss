@@ -44,7 +44,7 @@ section {
   line-height: 1;
 
   > .vertical {
-    font-size: 102px;
+    font-size: 120px;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
   }
@@ -269,7 +269,7 @@ section {
     gap: 16px;
 
     > .vertical {
-      font-size: 26px;
+      font-size: 50px;
     }
 
     > div {
@@ -279,7 +279,7 @@ section {
 
       > p {
         font-size: 22px;
-        color: #4b47ff;
+        color: #9747FF;
       }
     }
   }
@@ -310,11 +310,10 @@ section {
       max-height: 800px;
     }
   }
-
   .frameWrapper {
     top: 320px;
-    > img {
-      height: 100%;
-    }
+    right: 0;
+    width: 100%;
+    max-width: 100%;
   }
 }
