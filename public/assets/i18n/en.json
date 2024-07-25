@@ -38,6 +38,7 @@
     "errorMail": "Please enter your email.",
     "errorMessageEmpty": "Please enter a message.",
     "errorMessageShort": "Message must be at least 4 characters long.",
-    "errorPrivacy": "Please accept the privacy police."
+    "errorPrivacy": "Please accept the privacy police.",
+    "submitMessage": "Your Message is Send."
   }
 }

@@ -73,7 +73,7 @@
   @include dFlex($jc: space-between);
   padding: 37px 100px;
 
-  >img {
+  .imgNavWrapper  {
     width: 150px;
     height: 36px;
   }

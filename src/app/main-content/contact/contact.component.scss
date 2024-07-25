@@ -9,7 +9,7 @@ section {
 
 a {
   text-decoration: none;
-  color: #9747FF;
+  color: #9747ff;
   cursor: pointer;
 }
 
@@ -27,6 +27,24 @@ a {
   > h2 {
     font-size: 90px;
   }
+}
+
+.submitMessage {
+  color: #0aa50a;
+  border-radius: 10px;
+  font-size: 16px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.upArrow {
+  position: absolute;
+  right: 32px;
+}
+
+.upArrowImg:hover {
+  filter: brightness(0) saturate(100%) invert(84%) sepia(90%) saturate(1612%)
+    hue-rotate(33deg) brightness(93%) contrast(94%);
 }
 
 main {
@@ -56,13 +74,14 @@ select,
 textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #9747FF;
+  border: 1px solid #9747ff;
   border-radius: 10px;
   box-sizing: border-box;
   margin-top: 6px;
   resize: none;
   background-color: rgba($color: #000000, $alpha: 0);
   color: white;
+  font-family: "Poppins", sans-serif;
 }
 
 .fixedHeightSmall {
@@ -96,12 +115,15 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #9747FF;
+  background-color: #9747ff;
 }
 
 input[type="submit"]:disabled {
-    background-color: #B6B6B6;
+  background-color: #b6b6b6;
+  &:hover {
+    cursor: default;
   }
+}
 
 .container {
   border-radius: 5px;
@@ -242,7 +264,6 @@ input[type="checkbox"]:checked:before {
     }
   }
 
-
   main {
     padding: 0 28px;
     > .description {
@@ -262,8 +283,8 @@ input[type="checkbox"]:checked:before {
   .container {
     padding: 0 12%;
   }
-  main{
-    >.description {
+  main {
+    > .description {
       padding: 0 12%;
     }
   }
@@ -271,5 +292,5 @@ input[type="checkbox"]:checked:before {
     > h2 {
       padding: 0 8%;
     }
-}
+  }
 }

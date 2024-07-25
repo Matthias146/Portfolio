@@ -37,6 +37,7 @@
     "errorMail": "Bitte geben Sie eine E-mail Adresse an",
     "errorMessageEmpty": "Bitte geben Sie eine Nachricht ein.",
     "errorMessageShort": "Die Nachricht muss mindestens 4 Zeichen enthalten.",
-    "errorPrivacy": "Bitte akzeptieren sie Datenschutzbestimmungen."
+    "errorPrivacy": "Bitte akzeptieren sie Datenschutzbestimmungen.",
+    "submitMessage": "Nachricht wurde versendet."
   }
 }

@@ -25,6 +25,10 @@ export class ContactComponent {
 
   mailTest = false;
 
+  submitMessage = false;
+
+
+
   post = {
     endPoint: 'https://matthias-hammelehle.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -42,12 +46,18 @@ export class ContactComponent {
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
+            this.submitMessage = true;
             ngForm.resetForm();
+            setTimeout(() => {
+              this.submitMessage = false;
+            }, 5000);
           },
           error: (error) => {
+
             console.error(error);
           },
           complete: () => console.log('send post complete'),
+
         });
     }
   }

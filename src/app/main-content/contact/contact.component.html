@@ -89,8 +89,12 @@
         <div class="submitContainer">
           <input type="submit" value="{{ 'contact.button' | translate }}" [disabled]="!contactForm.valid"/>
         </div>
+        <div *ngIf="submitMessage" class="submitMessage">
+          {{"contact.submitMessage" | translate}}
+        </div>
       </form>
     </div>
   </main>
   <img src="assets/img/Purple shadow footer V2.png" alt="" class="contactShadow" />
+  <a class="upArrow" href="#"><img class="upArrowImg" src="assets/img/upSite.png" alt=""></a>
 </section>
