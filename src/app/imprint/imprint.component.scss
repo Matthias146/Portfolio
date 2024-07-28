@@ -1,11 +1,11 @@
 .inprint-content{
   margin-top: 50px;
   color: white;
-  position: relative;
-  // padding-left: 100px;
-  // padding-right: 100px;
-  padding: 100px 100px;
-  height: 100vh;
+  // position: relative;
+  padding: 100px 100px 0 100px;
+  >p {
+    font-size: 12px;
+  }
 }
 
 a{

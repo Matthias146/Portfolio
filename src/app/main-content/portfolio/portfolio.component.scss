@@ -1,7 +1,7 @@
 @import "./../../shared/variable.scss";
 
 .portfolioSection {
-  margin-top: 200px;
+  margin-top: 100px;
   position: relative;
 
   > p {
@@ -201,26 +201,33 @@
 @media (max-width: 450px) {
   .headlineContainer {
     > h2 {
+      margin-top: 32px;
       font-size: 36px;
     }
 
   }
   .projectInfo{
-    padding: 0 64px;
+    padding: 0 32px;
     width: 100%;
     max-width: 100%;
+    gap: 0;
 
 
     .projectBtns {
       >a {
+        text-wrap: nowrap;
         padding: 21px;
       }
     }
   }
   .portfolioBodyP{
     font-size: 16px;
-    text-wrap: balance;
-    padding: 32px;
+    padding: 24px;
+  }
+  .portfolioSection {
+    >p {
+      margin-bottom: 0;
+    }
   }
 
 }

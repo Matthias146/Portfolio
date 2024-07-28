@@ -9,8 +9,12 @@
   flex-direction: column;
 }
 
-app-profile-top-sectio {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+app-profile-top-section {
+  height: 100%;
+  margin-bottom: 130px;
 }
+
+app-about-me {
+  margin-top: -70px;
+}
+

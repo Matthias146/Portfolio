@@ -1,11 +1,14 @@
 @import "./../../shared/variable.scss";
 
 section {
+  position: absolute;
+  left: 0;
+  right: 0;
   @include dFlex($g: 23px);
   flex-direction: column;
   border-top: 4px solid $main-focus;
   padding: 60px 0;
-
+  width: 100vw;
 
   .logoContainer {
     >img {

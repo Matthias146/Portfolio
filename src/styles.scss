@@ -51,6 +51,10 @@ html {
   @include dFlex($jc: flex-start);
   flex-direction: column;
   scroll-behavior: smooth;
+  background-image: url("./../public/assets/img/curve2.png");
+  background-repeat: no-repeat;
+  background-size: 100vw 100%;
+  background-position: top 520px left 0;
 }
 
 body {
@@ -58,6 +62,7 @@ body {
   width: 100vw;
   max-width: 1440px;
   color: white;
+
 }
 
 app-root {
@@ -70,6 +75,16 @@ app-root {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+  html {
+    background-image: url("./../public/assets/img/curve2.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 100%;
+    background-position: top 660px left 0;
+
+  }
 }
 
 /* poppins-regular - latin */
