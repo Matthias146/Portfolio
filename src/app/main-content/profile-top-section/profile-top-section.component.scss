@@ -1,11 +1,14 @@
 @import "./../../shared/variable.scss";
 
+// .sectionWrapper {
+//   min-height: 100vh;
+// }
+
 section {
   @include dFlex($ai: flex-start, $jc: flex-start, $g: 32px);
   width: 100%;
   padding-top: 50px;
   position: relative;
-  // height: 100vh;
   > .heroWrapper {
     width: 100%;
     @include dFlex($jc: space-evenly, $ai: flex-start);
